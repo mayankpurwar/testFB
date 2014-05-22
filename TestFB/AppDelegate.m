@@ -267,7 +267,12 @@ NSString *const FBSessionStateChangedNotification = @"com.example.Login:FBSessio
                  NSLog(@"%@",user.id);
                  NSLog(@"%@",user);
 //                 [ViewController performSegueWithIdentifier:@"your_storyboard_identifier" sender:nil]
-                 ViewController *login = [ViewController alloc];
+                 
+                 
+                 
+                 //ViewController *login = [ViewController alloc]; //THIS IS WRONG! you're allocing a new view controller instead of referencing the already created one!
+                 
+                 
                  //                 [login ClickedRegisterBtn];
                  
                  
@@ -275,7 +280,7 @@ NSString *const FBSessionStateChangedNotification = @"com.example.Login:FBSessio
 //                 
 //                 UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //                 ViewController *login = [storyBoard instantiateViewControllerWithIdentifier:@"login"];
-                 [login performSegueWithIdentifier:@"1" sender:login];
+                 [self.loginViewController performSegueWithIdentifier:@"1" sender:self.loginViewController];
                  //                 [login ClickedRegisterBtn];
                  
                  
