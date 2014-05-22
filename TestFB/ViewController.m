@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Setting reference in app delegate for Facebook Login callback
+    [(AppDelegate*)[UIApplication sharedApplication].delegate setLoginViewController:self];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

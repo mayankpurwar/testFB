@@ -27,7 +27,7 @@
 
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic,weak) UIViewController* loginViewController;
 
 
 - (BOOL) isReachable:(NSString *)url;
